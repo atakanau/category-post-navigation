@@ -1,0 +1,260 @@
+# Turkish translation for Category Post Navigation.
+msgid ""
+msgstr ""
+"Project-Id-Version: Category Post Navigation 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/category-post-navigation\n"
+"POT-Creation-Date: 2026-11-22T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-11-22T00:00:00+00:00\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: category-post-navigation\n"
+
+msgid "After content"
+msgstr "İçerikten sonra"
+
+msgid "Advanced Settings"
+msgstr "Gelişmiş ayarlar"
+
+msgid "All posts"
+msgstr "Tüm yazılar"
+
+msgid "Ascending"
+msgstr "Artan"
+
+msgid "Automatic display"
+msgstr "Otomatik gösterim"
+
+msgid "Basic Settings"
+msgstr "Temel ayarlar"
+
+msgid "Before content"
+msgstr "İçerikten önce"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Categories"
+msgstr "Kategoriler"
+
+msgid "Category Navigation"
+msgstr "Kategori Navigasyonu"
+
+msgid "Category Post Navigation"
+msgstr "Kategori Yazı Navigasyonu"
+
+msgid "Category with the most posts"
+msgstr "En çok yazı içeren kategori"
+
+msgid "Classic list"
+msgstr "Klasik liste"
+
+msgid "Classic list (all posts)"
+msgstr "Klasik liste (tüm yazılar)"
+
+msgid "Collapse long lists to numbers around the current post"
+msgstr "Uzun listeleri mevcut yazının çevresindeki numaralara indirger"
+
+msgid "Custom text for the next link; empty uses the translated default."
+msgstr "Sonraki bağlantısı için özel metin; boş bırakılırsa çevrilmiş varsayılan kullanılır."
+
+msgid "Custom text for the previous link; empty uses the translated default."
+msgstr "Önceki bağlantısı için özel metin; boş bırakılırsa çevrilmiş varsayılan kullanılır."
+
+msgid "Date"
+msgstr "Tarih"
+
+msgid "Deepest (child) category"
+msgstr "En derin (alt) kategori"
+
+msgid "Default usage, which follows the settings above:"
+msgstr "Yukarıdaki ayarları izleyen varsayılan kullanım:"
+
+msgid "Descending"
+msgstr "Azalan"
+
+msgid "Direction"
+msgstr "Sıralama yönü"
+
+msgid "Display"
+msgstr "Görüntüleme"
+
+msgid "Empty selection means all categories."
+msgstr "Boş seçim tüm kategoriler anlamına gelir."
+
+msgid "First category (lowest ID)"
+msgstr "İlk kategori (en düşük ID)"
+
+msgid "Fixed total"
+msgstr "Sabit toplam"
+
+msgid "Fixed window"
+msgstr "Sabit pencere"
+
+msgid "Fixed-size window; the count stays constant near the edges."
+msgstr "Sabit boyutlu pencere; kenarlara yakınken sayı sabit kalır."
+
+msgid "Horizontal"
+msgstr "Yatay"
+
+msgid "How to pick the context category when a post belongs to several categories."
+msgstr "Bir yazı birden fazla kategoriye aitken bağlam kategorisinin seçim yöntemi."
+
+msgid "Items per side"
+msgstr "Her yönde öğe sayısı"
+
+msgid "Layout"
+msgstr "Yerleşim"
+
+msgid "Live preview. Global settings apply unless overridden in the block sidebar."
+msgstr "Canlı önizleme. Blok kenar çubuğunda değiştirilmedikçe genel ayarlar geçerlidir."
+
+msgid "Live preview needs a published single post whose category has at least two posts; the navigation renders on the front end."
+msgstr "Canlı önizleme, kategorisinde en az iki yazı bulunan yayınlanmış bir tekil yazı gerektirir; navigasyon ön yüzde görüntülenir."
+
+msgid "Limit navigation to selected categories"
+msgstr "Navigasyonu seçili kategorilerle sınırla"
+
+msgid "Mixed"
+msgstr "Karma"
+
+msgid "Mixed combines prev/next links with the numeric list."
+msgstr "Karma, önceki/sonraki bağlantılarını sayısal listeyle birleştirir."
+
+msgid "Mode"
+msgstr "Görünüm modu"
+
+msgid "Multi-category priority"
+msgstr "Çok kategorili öncelik"
+
+msgid "Navigate posts in this category"
+msgstr "Bu kategorideki yazılar arasında gezin"
+
+msgid "Nearby window"
+msgstr "Yakın çevre"
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "Next label"
+msgstr "Sonraki etiketi"
+
+msgid "Numbered list with ellipsis for long series."
+msgstr "Uzun seriler için kısaltmalı numaralı liste."
+
+msgid "Numbering"
+msgstr "Numaralandırma"
+
+msgid "Numeric"
+msgstr "Sayısal"
+
+msgid "Numeric list"
+msgstr "Numaralı liste"
+
+msgid "Order by"
+msgstr "Sıralama alanı"
+
+msgid "Override any setting per usage; unknown or invalid attributes fall back to the settings:"
+msgstr "Her kullanımda ayarları geçersiz kılabilirsiniz; bilinmeyen veya geçersiz öznitelikler ayarlara döner:"
+
+msgid "Post Navigation"
+msgstr "Yazı Navigasyonu"
+
+msgid "Posts around the current post"
+msgstr "Mevcut yazının çevresindeki yazılar"
+
+msgid "Posts on each side"
+msgstr "Her iki yandaki yazı sayısı"
+
+msgid "Posts shown on each side of the current post."
+msgstr "Mevcut yazının her iki yanında gösterilecek yazılar."
+
+msgid "Presets fill the settings below as a quick start; adjust anything and save."
+msgstr "Hazır ayarlar aşağıdaki alanları hızlı bir başlangıç olarak doldurur; dilediğiniz gibi ayarlayıp kaydedin."
+
+msgid "Prev / Next"
+msgstr "Önceki / Sonraki"
+
+msgid "Prev / Next links"
+msgstr "Önceki / Sonraki bağlantıları"
+
+msgid "Preview"
+msgstr "Önizleme"
+
+msgid "Preview of the navigation with sample posts; it updates as you change the settings."
+msgstr "Örnek yazılarla navigasyon önizlemesi; ayarları değiştirdikçe güncellenir."
+
+msgid "Previous"
+msgstr "Önceki"
+
+msgid "Previous label"
+msgstr "Önceki etiketi"
+
+msgid "Quick start"
+msgstr "Hızlı başlangıç"
+
+msgid "Sample Post %d"
+msgstr "Örnek Yazı %d"
+
+msgid "Scope"
+msgstr "Kapsam"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Shortcode"
+msgstr "Kısa kod"
+
+msgid "Show titles"
+msgstr "Başlıkları göster"
+
+msgid "Show titles next to numbers"
+msgstr "Numaraların yanında başlıkları göster"
+
+msgid "Simple step-by-step links."
+msgstr "Basit adım adım bağlantılar."
+
+msgid "The category filter is off: navigation uses all categories."
+msgstr "Kategori filtresi kapalı: navigasyon tüm kategorileri kullanır."
+
+msgid "Title"
+msgstr "Başlık"
+
+msgid "Total items"
+msgstr "Toplam öğe"
+
+msgid "Total items shown; the window shifts near the edges to keep the count constant."
+msgstr "Gösterilen toplam öğe; sayı sabit kalsın diye pencere kenarlara yakınken kayar."
+
+msgid "Use ellipsis"
+msgstr "Kısaltma kullan"
+
+msgid "Use settings default"
+msgstr "Ayar varsayılanını kullan"
+
+msgid "Vertical"
+msgstr "Dikey"
+
+msgid "Window"
+msgstr "Pencere"
+
+msgid "Window items"
+msgstr "Penceredeki öğe sayısı"
+
+msgid "Support"
+msgstr "Destek"
+
+msgid "Rate ★★★★★"
+msgstr "Puan ver ★★★★★"
+
+msgid "❤︎ Donate"
+msgstr "❤︎ Bağış yap"
+
+msgid "Support and donation"
+msgstr "Destek ve bağış"
+
+msgid "Get help, leave a rating or support the development."
+msgstr "Yardım alın, puan verin veya geliştirmeyi destekleyin."

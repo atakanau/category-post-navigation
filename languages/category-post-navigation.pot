@@ -1,0 +1,258 @@
+# Copyright (C) 2026 Category Post Navigation
+# This file is distributed under the same license as the Category Post Navigation plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Category Post Navigation 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/category-post-navigation\n"
+"POT-Creation-Date: 2026-11-22T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: hand-maintained\n"
+"X-Domain: category-post-navigation\n"
+
+msgid "After content"
+msgstr ""
+
+msgid "Advanced Settings"
+msgstr ""
+
+msgid "All posts"
+msgstr ""
+
+msgid "Ascending"
+msgstr ""
+
+msgid "Automatic display"
+msgstr ""
+
+msgid "Basic Settings"
+msgstr ""
+
+msgid "Before content"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Category Navigation"
+msgstr ""
+
+msgid "Category Post Navigation"
+msgstr ""
+
+msgid "Category with the most posts"
+msgstr ""
+
+msgid "Classic list"
+msgstr ""
+
+msgid "Classic list (all posts)"
+msgstr ""
+
+msgid "Collapse long lists to numbers around the current post"
+msgstr ""
+
+msgid "Custom text for the next link; empty uses the translated default."
+msgstr ""
+
+msgid "Custom text for the previous link; empty uses the translated default."
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Deepest (child) category"
+msgstr ""
+
+msgid "Default usage, which follows the settings above:"
+msgstr ""
+
+msgid "Descending"
+msgstr ""
+
+msgid "Direction"
+msgstr ""
+
+msgid "Display"
+msgstr ""
+
+msgid "Empty selection means all categories."
+msgstr ""
+
+msgid "First category (lowest ID)"
+msgstr ""
+
+msgid "Fixed total"
+msgstr ""
+
+msgid "Fixed window"
+msgstr ""
+
+msgid "Fixed-size window; the count stays constant near the edges."
+msgstr ""
+
+msgid "Horizontal"
+msgstr ""
+
+msgid "How to pick the context category when a post belongs to several categories."
+msgstr ""
+
+msgid "Items per side"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Live preview. Global settings apply unless overridden in the block sidebar."
+msgstr ""
+
+msgid "Live preview needs a published single post whose category has at least two posts; the navigation renders on the front end."
+msgstr ""
+
+msgid "Limit navigation to selected categories"
+msgstr ""
+
+msgid "Mixed"
+msgstr ""
+
+msgid "Mixed combines prev/next links with the numeric list."
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Multi-category priority"
+msgstr ""
+
+msgid "Navigate posts in this category"
+msgstr ""
+
+msgid "Nearby window"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Next label"
+msgstr ""
+
+msgid "Numbered list with ellipsis for long series."
+msgstr ""
+
+msgid "Numbering"
+msgstr ""
+
+msgid "Numeric"
+msgstr ""
+
+msgid "Numeric list"
+msgstr ""
+
+msgid "Order by"
+msgstr ""
+
+msgid "Override any setting per usage; unknown or invalid attributes fall back to the settings:"
+msgstr ""
+
+msgid "Post Navigation"
+msgstr ""
+
+msgid "Posts around the current post"
+msgstr ""
+
+msgid "Posts on each side"
+msgstr ""
+
+msgid "Posts shown on each side of the current post."
+msgstr ""
+
+msgid "Presets fill the settings below as a quick start; adjust anything and save."
+msgstr ""
+
+msgid "Prev / Next"
+msgstr ""
+
+msgid "Prev / Next links"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Preview of the navigation with sample posts; it updates as you change the settings."
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Previous label"
+msgstr ""
+
+msgid "Quick start"
+msgstr ""
+
+msgid "Sample Post %d"
+msgstr ""
+
+msgid "Scope"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Shortcode"
+msgstr ""
+
+msgid "Show titles"
+msgstr ""
+
+msgid "Show titles next to numbers"
+msgstr ""
+
+msgid "Simple step-by-step links."
+msgstr ""
+
+msgid "The category filter is off: navigation uses all categories."
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Total items"
+msgstr ""
+
+msgid "Total items shown; the window shifts near the edges to keep the count constant."
+msgstr ""
+
+msgid "Use ellipsis"
+msgstr ""
+
+msgid "Use settings default"
+msgstr ""
+
+msgid "Vertical"
+msgstr ""
+
+msgid "Window"
+msgstr ""
+
+msgid "Window items"
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Rate ★★★★★"
+msgstr ""
+
+msgid "❤︎ Donate"
+msgstr ""
+
+msgid "Support and donation"
+msgstr ""
+
+msgid "Get help, leave a rating or support the development."
+msgstr ""

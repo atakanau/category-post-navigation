@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "catpnav/navigation",
+	"version": "0.1.0",
+	"title": "Category Post Navigation",
+	"category": "theme",
+	"icon": "category",
+	"keywords": ["navigation", "pagination", "posts", "category"],
+	"description": "Numeric, prev/next and mixed navigation between published posts of the current post's category.",
+	"textdomain": "category-post-navigation",
+	"example": {
+		"viewportWidth": 640,
+		"attributes": {
+			"categoryId": 0,
+			"mode": "numeric",
+			"scope": "all",
+			"around": 0
+		}
+	},
+	"attributes": {
+		"categoryId": {
+			"type": "integer",
+			"default": 0
+		},
+		"mode": {
+			"type": "string",
+			"default": ""
+		},
+		"scope": {
+			"type": "string",
+			"default": ""
+		},
+		"around": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"editorScript": "catpnav-block-editor",
+	"supports": {
+		"html": false
+	}
+}
