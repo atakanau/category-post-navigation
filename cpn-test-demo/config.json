@@ -1,0 +1,32 @@
+{
+  "name": "Category Post Navigation Test Demo",
+  "description": "Tests numeric/prev-next modes, ellipsis, sorting, and single-post edge cases",
+  "pipeline": [
+    {
+      "step": "install_theme",
+      "slug": "twentytwentyfour",
+      "activate": true
+    },
+    {
+      "step": "install_plugin",
+      "slug": "wordpress-importer",
+      "activate": true
+    },
+    {
+      "step": "import_content",
+      "content_file": "content.xml",
+      "fetch_attachments": false,
+      "rewrite_urls": true
+    },
+    {
+      "step": "apply_setup",
+      "show_on_front": "posts",
+      "options": {
+        "blogname": "CPN Test Lab",
+        "blogdescription": "Navigation plugin test environment",
+        "permalink_structure": "/%postname%/",
+        "posts_per_page": 10
+      }
+    }
+  ]
+}

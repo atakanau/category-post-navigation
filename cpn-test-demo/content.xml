@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+	<title>CPN Test Site</title>
+	<link>https://example.test</link>
+	<description>Test content for Category Post Navigation</description>
+	<language>en-US</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://example.test</wp:base_site_url>
+	<wp:base_blog_url>https://example.test</wp:base_blog_url>
+
+	<wp:author>
+		<wp:author_id>1</wp:author_id>
+		<wp:author_login><![CDATA[admin]]></wp:author_login>
+		<wp:author_email><![CDATA[admin@example.test]]></wp:author_email>
+		<wp:author_display_name><![CDATA[Admin]]></wp:author_display_name>
+	</wp:author>
+
+	<!-- 1. Long list & ellipsis test category (12 published posts) -->
+	<wp:category>
+		<wp:term_id>101</wp:term_id>
+		<wp:category_nicename><![CDATA[long-series]]></wp:category_nicename>
+		<wp:cat_name><![CDATA[Long Series]]></wp:cat_name>
+		<wp:category_description><![CDATA[12-post series for testing numeric pagination, ellipsis collapsing, and around-scope windows.]]></wp:category_description>
+	</wp:category>
+
+	<!-- 2. Date & title sorting test category (5 published posts) -->
+	<wp:category>
+		<wp:term_id>102</wp:term_id>
+		<wp:category_nicename><![CDATA[sorting-test]]></wp:category_nicename>
+		<wp:cat_name><![CDATA[Sorting Test]]></wp:cat_name>
+		<wp:category_description><![CDATA[Posts with intentionally staggered dates and alphabetical prefixes to test date vs. title sorting (ASC/DESC).]]></wp:category_description>
+	</wp:category>
+
+	<!-- 3. Secondary category for multi-category / term_id ordering checks -->
+	<wp:category>
+		<wp:term_id>103</wp:term_id>
+		<wp:category_nicename><![CDATA[secondary-group]]></wp:category_nicename>
+		<wp:cat_name><![CDATA[Secondary Group]]></wp:cat_name>
+		<wp:category_description><![CDATA[Secondary category for testing multi-category assignment and excluded category behavior.]]></wp:category_description>
+	</wp:category>
+
+	<!-- 4. Single published post + 1 draft boundary test category -->
+	<wp:category>
+		<wp:term_id>104</wp:term_id>
+		<wp:category_nicename><![CDATA[single-post-limit]]></wp:category_nicename>
+		<wp:cat_name><![CDATA[Single Post Limit]]></wp:cat_name>
+		<wp:category_description><![CDATA[Contains only one published post and one draft to verify that navigation stays hidden with fewer than two published posts.]]></wp:category_description>
+	</wp:category>
+
+	<!-- 5. Mega series category (30 published posts) for large-category & ellipsis stress testing -->
+	<wp:category>
+		<wp:term_id>105</wp:term_id>
+		<wp:category_nicename><![CDATA[mega-series]]></wp:category_nicename>
+		<wp:cat_name><![CDATA[Mega Series]]></wp:cat_name>
+		<wp:category_description><![CDATA[30-post category for testing large-list ellipsis collapsing, around-scope windows, and live updates.]]></wp:category_description>
+	</wp:category>
+
+	<!-- LONG SERIES: 12 PUBLISHED POSTS -->
+	<item>
+		<title><![CDATA[Series Part 01: Getting Started]]></title>
+		<link>https://example.test/series-part-01/</link>
+		<pubDate>Mon, 01 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1001</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-01 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-01]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 1 of the long series. Useful for checking the first item boundary and previous-link behavior.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 02: Core Concepts]]></title>
+		<link>https://example.test/series-part-02/</link>
+		<pubDate>Tue, 02 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1002</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-02 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-02]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 2 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 03: Building Blocks]]></title>
+		<link>https://example.test/series-part-03/</link>
+		<pubDate>Wed, 03 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1003</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-03 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-03]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 3 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 04: Expanding Scope]]></title>
+		<link>https://example.test/series-part-04/</link>
+		<pubDate>Thu, 04 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1004</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-04 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-04]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 4 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 05: Midpoint Lead-In]]></title>
+		<link>https://example.test/series-part-05/</link>
+		<pubDate>Fri, 05 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1005</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-05 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-05]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 5 of the long series. Appears immediately before Part 6 when viewing the midpoint post.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 06: Centerpiece Post]]></title>
+		<link>https://example.test/series-part-06/</link>
+		<pubDate>Sat, 06 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1006</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-06 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-06]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 6 of the long series. Ideal spot to verify ellipsis collapsing on both sides of the active post and its neighbors.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 07: Second Half]]></title>
+		<link>https://example.test/series-part-07/</link>
+		<pubDate>Sun, 07 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1007</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-07 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-07]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 7 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 08: Going Deeper]]></title>
+		<link>https://example.test/series-part-08/</link>
+		<pubDate>Mon, 08 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1008</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-08 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-08]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 8 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 09: Edge Cases]]></title>
+		<link>https://example.test/series-part-09/</link>
+		<pubDate>Tue, 09 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1009</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-09 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-09]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 9 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 10: Patterns & Practices]]></title>
+		<link>https://example.test/series-part-10/</link>
+		<pubDate>Wed, 10 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1010</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-10 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-10]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 10 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 11: Almost Done]]></title>
+		<link>https://example.test/series-part-11/</link>
+		<pubDate>Thu, 11 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1011</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-11 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-11]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 11 of the long series.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Series Part 12: Wrap-Up]]></title>
+		<link>https://example.test/series-part-12/</link>
+		<pubDate>Fri, 12 Jun 2026 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1012</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-12 09:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[series-part-12]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="long-series"><![CDATA[Long Series]]></category>
+		<content:encoded><![CDATA[<p>Part 12 (final post) of the long series. Inline shortcode check: [category_post_navigation]</p>]]></content:encoded>
+	</item>
+
+	<!-- SORTING TEST: 5 PUBLISHED POSTS (Date order != Alphabetical title order) -->
+	<item>
+		<title><![CDATA[Zeta — Oldest Date Post]]></title>
+		<link>https://example.test/zeta-oldest-date-post/</link>
+		<pubDate>Mon, 01 May 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1021</wp:post_id>
+		<wp:post_date><![CDATA[2026-05-01 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[zeta-oldest-date-post]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="sorting-test"><![CDATA[Sorting Test]]></category>
+		<content:encoded><![CDATA[<p>Oldest by date (2026-05-01), last alphabetically by title (Zeta).</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Alfa — Second Date Post]]></title>
+		<link>https://example.test/alfa-second-date-post/</link>
+		<pubDate>Thu, 07 May 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1022</wp:post_id>
+		<wp:post_date><![CDATA[2026-05-07 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[alfa-second-date-post]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="sorting-test"><![CDATA[Sorting Test]]></category>
+		<content:encoded><![CDATA[<p>Second by date (2026-05-07), first alphabetically by title (Alfa).</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Gamma — Third Date Post]]></title>
+		<link>https://example.test/gamma-third-date-post/</link>
+		<pubDate>Wed, 13 May 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1023</wp:post_id>
+		<wp:post_date><![CDATA[2026-05-13 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[gamma-third-date-post]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="sorting-test"><![CDATA[Sorting Test]]></category>
+		<content:encoded><![CDATA[<p>Third by date (2026-05-13), third alphabetically by title (Gamma).</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Beta — Fourth Date Post]]></title>
+		<link>https://example.test/beta-fourth-date-post/</link>
+		<pubDate>Tue, 19 May 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1024</wp:post_id>
+		<wp:post_date><![CDATA[2026-05-19 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[beta-fourth-date-post]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="sorting-test"><![CDATA[Sorting Test]]></category>
+		<content:encoded><![CDATA[<p>Fourth by date (2026-05-19), second alphabetically by title (Beta).</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Delta — Newest Date Post]]></title>
+		<link>https://example.test/delta-newest-date-post/</link>
+		<pubDate>Mon, 25 May 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1025</wp:post_id>
+		<wp:post_date><![CDATA[2026-05-25 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[delta-newest-date-post]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="sorting-test"><![CDATA[Sorting Test]]></category>
+		<content:encoded><![CDATA[<p>Newest by date (2026-05-25), fourth alphabetically by title (Delta).</p>]]></content:encoded>
+	</item>
+
+	<!-- SINGLE POST BOUNDARY: 1 PUBLISHED + 1 DRAFT -->
+	<item>
+		<title><![CDATA[Only Published Post in Category]]></title>
+		<link>https://example.test/only-published-post-in-category/</link>
+		<pubDate>Tue, 26 May 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1031</wp:post_id>
+		<wp:post_date><![CDATA[2026-05-26 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[only-published-post-in-category]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="single-post-limit"><![CDATA[Single Post Limit]]></category>
+		<content:encoded><![CDATA[<p>Only one published post exists in this category; navigation should not render.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Draft Post (Excluded From Count)]]></title>
+		<link>https://example.test/draft-post-excluded-from-count/</link>
+		<pubDate>Wed, 27 May 2026 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>1032</wp:post_id>
+		<wp:post_date><![CDATA[2026-05-27 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[draft-post-excluded-from-count]]></wp:post_name>
+		<wp:status><![CDATA[draft]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="single-post-limit"><![CDATA[Single Post Limit]]></category>
+		<content:encoded><![CDATA[<p>Draft post should not be counted as a published post.</p>]]></content:encoded>
+	</item>
+
+	<!-- MEGA SERIES: 30 PUBLISHED POSTS -->
+	<item>
+		<title><![CDATA[Mega Episode 01]]></title>
+		<link>https://example.test/mega-episode-01/</link>
+		<pubDate>Mon, 01 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2001</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-01 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-01]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 1 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 02]]></title>
+		<link>https://example.test/mega-episode-02/</link>
+		<pubDate>Tue, 02 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2002</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-02 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-02]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 2 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 03]]></title>
+		<link>https://example.test/mega-episode-03/</link>
+		<pubDate>Wed, 03 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2003</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-03 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-03]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 3 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 04]]></title>
+		<link>https://example.test/mega-episode-04/</link>
+		<pubDate>Thu, 04 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2004</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-04 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-04]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 4 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 05]]></title>
+		<link>https://example.test/mega-episode-05/</link>
+		<pubDate>Fri, 05 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2005</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-05 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-05]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 5 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 06]]></title>
+		<link>https://example.test/mega-episode-06/</link>
+		<pubDate>Sat, 06 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2006</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-06 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-06]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 6 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 07]]></title>
+		<link>https://example.test/mega-episode-07/</link>
+		<pubDate>Sun, 07 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2007</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-07 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-07]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 7 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 08]]></title>
+		<link>https://example.test/mega-episode-08/</link>
+		<pubDate>Mon, 08 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2008</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-08 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-08]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 8 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 09]]></title>
+		<link>https://example.test/mega-episode-09/</link>
+		<pubDate>Tue, 09 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2009</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-09 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-09]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 9 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 10]]></title>
+		<link>https://example.test/mega-episode-10/</link>
+		<pubDate>Wed, 10 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2010</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-10 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-10]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 10 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 11]]></title>
+		<link>https://example.test/mega-episode-11/</link>
+		<pubDate>Thu, 11 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2011</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-11 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-11]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 11 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 12]]></title>
+		<link>https://example.test/mega-episode-12/</link>
+		<pubDate>Fri, 12 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2012</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-12 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-12]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 12 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 13]]></title>
+		<link>https://example.test/mega-episode-13/</link>
+		<pubDate>Sat, 13 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2013</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-13 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-13]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 13 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 14]]></title>
+		<link>https://example.test/mega-episode-14/</link>
+		<pubDate>Sun, 14 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2014</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-14 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-14]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 14 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 15]]></title>
+		<link>https://example.test/mega-episode-15/</link>
+		<pubDate>Mon, 15 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2015</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-15 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-15]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 15 of 30. Center point for checking ellipsis collapsing on both sides.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 16]]></title>
+		<link>https://example.test/mega-episode-16/</link>
+		<pubDate>Tue, 16 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2016</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-16 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-16]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 16 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 17]]></title>
+		<link>https://example.test/mega-episode-17/</link>
+		<pubDate>Wed, 17 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2017</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-17 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-17]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 17 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 18]]></title>
+		<link>https://example.test/mega-episode-18/</link>
+		<pubDate>Thu, 18 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2018</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-18 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-18]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 18 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 19]]></title>
+		<link>https://example.test/mega-episode-19/</link>
+		<pubDate>Fri, 19 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2019</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-19 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-19]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 19 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 20]]></title>
+		<link>https://example.test/mega-episode-20/</link>
+		<pubDate>Sat, 20 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2020</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-20 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-20]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 20 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 21]]></title>
+		<link>https://example.test/mega-episode-21/</link>
+		<pubDate>Sun, 21 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2021</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-21 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-21]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 21 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 22]]></title>
+		<link>https://example.test/mega-episode-22/</link>
+		<pubDate>Mon, 22 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2022</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-22 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-22]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 22 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 23]]></title>
+		<link>https://example.test/mega-episode-23/</link>
+		<pubDate>Tue, 23 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2023</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-23 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-23]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 23 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 24]]></title>
+		<link>https://example.test/mega-episode-24/</link>
+		<pubDate>Wed, 24 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2024</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-24 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-24]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 24 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 25]]></title>
+		<link>https://example.test/mega-episode-25/</link>
+		<pubDate>Thu, 25 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2025</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-25 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-25]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 25 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 26]]></title>
+		<link>https://example.test/mega-episode-26/</link>
+		<pubDate>Fri, 26 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2026</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-26 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-26]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 26 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 27]]></title>
+		<link>https://example.test/mega-episode-27/</link>
+		<pubDate>Sat, 27 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2027</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-27 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-27]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 27 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 28]]></title>
+		<link>https://example.test/mega-episode-28/</link>
+		<pubDate>Sun, 28 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2028</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-28 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-28]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 28 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 29]]></title>
+		<link>https://example.test/mega-episode-29/</link>
+		<pubDate>Mon, 29 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2029</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-29 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-29]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 29 of 30.</p>]]></content:encoded>
+	</item>
+	<item>
+		<title><![CDATA[Mega Episode 30]]></title>
+		<link>https://example.test/mega-episode-30/</link>
+		<pubDate>Tue, 30 Jun 2026 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<wp:post_id>2030</wp:post_id>
+		<wp:post_date><![CDATA[2026-06-30 08:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[mega-episode-30]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<category domain="category" nicename="mega-series"><![CDATA[Mega Series]]></category>
+		<content:encoded><![CDATA[<p>Mega Series episode 30 of 30.</p>]]></content:encoded>
+	</item>
+</channel>
+</rss>
